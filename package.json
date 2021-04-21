@@ -1,0 +1,60 @@
+{
+   "name": "exel",
+   "version": "1.0.0",
+   "description": "js",
+   "main": "webpack.config.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "cross-env NODE_ENV=development webpack-dev-server --open",
+      "build": "cross-env NODE_ENV=production webpack --mode production"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/levko1996/ex.git"
+   },
+   "keywords": [
+      "js",
+      "exel"
+   ],
+   "author": "levo",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/levko1996/ex/issues"
+   },
+   "homepage": "https://github.com/levko1996/ex#readme",
+   "private": true,
+   "browserslist": "> 0.25%, not dead",
+   "devDependencies": {
+      "@babel/core": "^7.11.6",
+      "@babel/plugin-proposal-class-properties": "^7.10.4",
+      "@babel/plugin-syntax-class-properties": "^7.10.4",
+      "@babel/preset-env": "^7.11.5",
+      "@types/jest": "^26.0.15",
+      "@types/node": "^14.14.7",
+      "babel-eslint": "^10.1.0",
+      "babel-jest": "^26.6.3",
+      "babel-loader": "^8.1.0",
+      "babel-plugin-transform-class-properties": "^6.24.1",
+      "clean-webpack-plugin": "^3.0.0",
+      "copy-webpack-plugin": "^5.1.1",
+      "cross-env": "^7.0.2",
+      "css-loader": "^4.3.0",
+      "eslint": "^7.10.0",
+      "eslint-config-google": "^0.14.0",
+      "eslint-loader": "^4.0.2",
+      "html-webpack-plugin": "^4.5.0",
+      "jest": "^26.6.3",
+      "mini-css-extract-plugin": "^0.11.2",
+      "normalize.css": "^8.0.1",
+      "sass": "^1.26.11",
+      "sass-loader": "^10.0.2",
+      "ts-jest": "^26.4.4",
+      "webpack": "^4.44.2",
+      "webpack-cli": "^3.3.12",
+      "webpack-dev-server": "^3.11.0"
+   },
+   "dependencies": {
+      "@babel/polyfill": "^7.11.5",
+      "eslint-plugin-jest": "^24.1.0"
+   }
+}
