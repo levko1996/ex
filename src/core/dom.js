@@ -1,4 +1,3 @@
-
 class Dom {
    constructor(selector) {
       this.$el = typeof selector === 'string'
@@ -12,6 +11,16 @@ class Dom {
          return this
       }
       return this.$el.outerHTML.trim()
+   }
+   text(text) {
+      if (typeof text === 'string') {
+         this.$el.textContent = text
+         return this
+      }
+      if (this.$el.tagName.toLowerCase() === 'input') {
+         return this.$el.value.trim()
+      }
+      return this.$el.textContent.trim()
    }
 
    clear() {
@@ -38,10 +47,36 @@ class Dom {
       return this
    }
 
+   addClass(className) {
+      this.$el.classList.add(className)
+      return this
+   }
+   removeClass(className) {
+      this.$el.classList.remove(className)
+      return this
+   }
+
+   id(parse) {
+      if (parse) {
+         const parsed = this.id().split(':')
+         return {
+            row: +parsed[0],
+            col: +parsed[1]
+         }
+      }
+      return this.data.id
+   }
+   focus() {
+      this.$el.focus()
+      return this
+   }
    get data() {
       return this.$el.dataset
    }
 
+   find(selector) {
+      return $(this.$el.querySelector(selector))
+   }
    findAll(selector) {
       return this.$el.querySelectorAll(selector)
    }
